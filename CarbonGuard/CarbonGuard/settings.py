@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "user",
     "rest_framework",
     'limit',
     'phonenumber_field',
@@ -62,7 +61,6 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend'
 ]
 ROOT_URLCONF = 'Chikara.urls'
-AUTH_USER_MODEL = 'user.User'
 REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication']}
 
 ROOT_URLCONF = "CarbonGuard.urls"
