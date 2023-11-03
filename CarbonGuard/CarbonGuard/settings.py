@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "user",
+    "rest_framework",
+    'limit',
+    'phonenumber_field',
+    'rest_framework.authtoken'
+
 ]
 
 MIDDLEWARE = [
@@ -48,6 +54,16 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+SESSION_ENGINE = "django.contrib.sessions.backends.db"  # Use database-backed sessions
+SESSION_COOKIE_NAME = "cookie"
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend'
+]
+ROOT_URLCONF = 'Chikara.urls'
+AUTH_USER_MODEL = 'user.User'
+REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication']}
 
 ROOT_URLCONF = "CarbonGuard.urls"
 
