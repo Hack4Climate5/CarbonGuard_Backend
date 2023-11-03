@@ -1,3 +1,5 @@
 /myenv
 myenv
 myenv/
+__pycache__/
+.myenv
